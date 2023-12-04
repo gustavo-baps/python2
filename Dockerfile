@@ -6,7 +6,8 @@ COPY projeto-python/ /app/projeto-python/
 COPY venv/ /app/venv/
 COPY requirements.txt /app/
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m venv venv
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
